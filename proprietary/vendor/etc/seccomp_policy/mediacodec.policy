@@ -1,0 +1,12 @@
+# Organized by frequency of systemcall - in descending order for
+# best performance.
+unlinkat: 1
+bind: 1
+listen: 1
+accept4: 1
+sendto: 1
+getsockopt: 1
+pselect6: 1
+
+
+

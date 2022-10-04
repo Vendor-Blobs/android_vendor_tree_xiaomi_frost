@@ -1,0 +1,16 @@
+on init
+    chown system system /sys/class/nanohub/nanohub/reset
+    chmod 0660 /sys/class/nanohub/nanohub/reset
+
+on post-fs-data
+    mkdir /data/vendor/sensors/nanohub_lock 770 system system
+    chown system system /mnt/vendor/persist/sensorcal.json
+    chmod 0660 /mnt/vendor/persist/sensorcal.json
+
+service vendor.sensors-hal-2-1 /vendor/bin/hw/android.hardware.sensors@2.1-service
+    interface android.hardware.sensors@2.0::ISensors default
+    interface android.hardware.sensors@2.1::ISensors default
+    class hal
+    user system
+    group system
+    rlimit rtprio 10 10

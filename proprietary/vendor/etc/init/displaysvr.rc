@@ -1,0 +1,12 @@
+service displaysvr /vendor/bin/displaysvr
+    class late_start
+    user system
+    group system graphics
+    socket dispsocket stream 0660 system adb
+    disabled
+
+on property:vendor.display.disp_socket_service=1
+    start displaysvr
+
+on property:vendor.display.disp_socket_service=0
+    stop displaysvr

@@ -1,0 +1,4 @@
+service vendor.jlq.vibrator /vendor/bin/hw/vendor.jlq.hardware.vibrator.service
+    class hal
+    user system
+    group system input

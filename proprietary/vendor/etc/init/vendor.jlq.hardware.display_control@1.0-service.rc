@@ -1,0 +1,4 @@
+service vendor.jlq.display_control-1-0 /vendor/bin/hw/vendor.jlq.hardware.display_control@1.0-service
+    class hal
+    user system
+    group system

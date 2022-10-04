@@ -1,0 +1,18 @@
+on post-fs-data
+    mkdir /data/vendor/diag 0770 system log
+    restorecon_recursive /data/vendor/diag
+    mkdir /mnt/vendor/minidump 0770 system log
+    mount ext4 /dev/block/bootdevice/by-name/minidump /mnt/vendor/minidump rw noatime
+    chown system log /mnt/vendor/minidump
+    chmod 0770 /mnt/vendor/minidump
+    restorecon_recursive /mnt/vendor/minidump
+
+on property:sys.boot_completed=1
+    start vendor.pstore
+
+service vendor.pstore /vendor/bin/pstore
+    class core
+    user log
+    group system log
+    oneshot
+    disabled

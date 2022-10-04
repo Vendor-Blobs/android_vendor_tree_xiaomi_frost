@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parameter>
+  <item name="Config">
+    <!--value = 0x80000 + 7001-->
+    <param key="QCRIL_OEM_HOOK_REQID" value="531290"/>
+    <!--<param key="SupportSingleSIM"    value="true"/>-->
+  </item>
+  <item name="LightSensor">
+    <param key="BackLightFile" value="/sys/class/leds/lcd-backlight/brightness"/>
+  </item>
+  <item name="Camera">
+    <param key="TwinCameraType" value="switch"/>
+  </item>
+  <item name="Charge">
+    <param key="SupportCurrent" value="false"/>
+    <param key="SupportFastCharge" value="false"/>
+  </item>
+  <item name="Config">
+    <param key="ConnectorType" value="Type-C"/>
+  </item>
+  <item name="SecretCode">
+    <param key="WifiLogVer" value="V2"/>
+  </item>
+  <item name="LED">
+    <param key="hasBacklight" value="true"/>
+    <param key="hasWhiteLED" value="false"/>
+    <param key="hasRedLED" value="false"/>
+    <param key="hasGreenLED" value="false"/>
+    <param key="hasBlueLED" value="false"/>
+    <param key="hasBackTorch" value="true"/>
+    <param key="hasBackTorch2" value="false"/>
+    <param key="hasFrontTorch1" value="false"/>
+    <param key="hasBackTorch1_2" value="false"/>
+    <param key="hasKeyLED" value="false"/>
+	<param key="BackTorchFile1" value="/sys/class/leds/led:flash_0/brightness"/>
+  </item>
+  <item name="SAR_SENSOR">
+    <param key="SarFactoryEnable" value="false"/>
+  </item>
+  <item name="SoftVersion">
+    <param key="isShowIFAA_FIDO_Widevine_Keybox" value="true"/>
+    <param key="removeFlagBit" value="true"/>
+  </item>
+  <item name="FM">
+    <param key="isShowFm" value="false"/>
+  </item>
+  <item name="Battery">
+    <param key="isShowBatteryForAuthentic" value="false"/>
+  </item>
+  <item name="Motor">
+    <param key="isManualPass" value="true"/>
+  </item>
+  
+  <item name="SarsensorDiff">
+    <param key="main_cap_low" value="55"/>
+    <param key="main_cap_high" value="85"/>
+    <param key="sub_cap_low" value="50"/>
+    <param key="sub_cap_high" value="80"/>
+    <param key="max_low" value="2100"/>
+    <param key="max_high" value="3100"/>
+    <param key="C1_max_low" value="1350"/>
+    <param key="C1_max_high" value="2350"/>
+  </item>
+  <item name="camera">
+    <param key="frontCameraPixel" value="false"/>
+  </item>
+  <item name="FPSelf">
+    <param key="TestName_Silead" value="com.silead.factorytest.AutoTestActivity"/>
+  </item>
+</parameter>

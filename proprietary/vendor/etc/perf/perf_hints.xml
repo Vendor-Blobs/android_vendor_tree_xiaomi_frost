@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+/* Copyright (c) 2021 JLQ Technology Co., Ltd. or its affiliates.
+ * All Rights Reserved.
+ * Confidential and Proprietary - JLQ Technology Co., Ltd. or its affiliates.
+*/
+-->
+
+
+<!--Hint Ids are defined in perf_definition.h, increment ids linearly, do not modify Ids, or add in between-->
+<!--Resources is the pairs of opcode and level, don't add whitespace between them-->
+
+<PerfHints>
+    <!--scroll boost-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core -->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core -->
+        <!-- GPUBOOST_MIN_FREQ -->
+        <!-- DDRBOOST_MIN_FREQ -->
+    <Hint Id="0x0000001" Type="0" Timeout="80"
+        Resources="0x00002000,9,0x00003000,7,0x00102000,6,0x00201000,8" />
+    <Hint Id="0x0000001" Type="1" Timeout="5000"
+        Resources="0x00002000,9,0x00003000,7,0x00102000,6,0x00201000,8" />
+    <!--first launch boost-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core -->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core -->
+        <!-- GPUBOOST_MIN_FREQ -->
+        <!-- DDRBOOST_MIN_FREQ -->
+        <!-- SCHED_UCLAMP_MIN -->
+        <!-- SCHED_UCLAMP_LATENCY -->
+    <Hint Id="0x0000002" Type="0" Timeout="4000"
+        Resources="0x00002000,9,0x00003000,7,0x00102000,6,0x00004000,2,0x00006000,1,0x00201000,8" />
+    <!--rotation boost-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core -->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core -->
+        <!-- GPUBOOST_MIN_FREQ -->
+        <!-- DDRBOOST_MIN_FREQ -->
+        <!-- SCHED_UCLAMP_MIN -->
+        <!-- SCHED_UCLAMP_LATENCY -->
+    <Hint Id="0x0000003" Type="0" Timeout="1500"
+        Resources="0x00002000,9,0x00003000,7,0x00102000,6,0x00004000,2,0x00005000,1,0x00006000,1,0x00201000,7" />
+    <!--package install boost-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core -->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core -->
+        <!-- DDRBOOST_MIN_FREQ -->
+        <!-- SCHED_UCLAMP_MIN -->
+        <!-- SCHED_UCLAMP_LATENCY -->
+    <Hint Id="0x0000004" Type="0" Timeout="20000"
+        Resources="0x00002000,9,0x00003000,7,0x00004000,2,0x00006000,1,0x00201000,7" />
+    <!--subseq launch boost-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core -->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core -->
+        <!-- GPUBOOST_MIN_FREQ -->
+        <!-- DDRBOOST_MIN_FREQ -->
+        <!-- SCHED_TOP_UCLAMP_MIN -->
+        <!-- SCHED_DISPLAY_UCLAMP_MIN -->
+        <!-- SCHED_UCLAMP_LATENCY -->
+    <Hint Id="0x0000005" Type="0" Timeout="900"
+        Resources="0x00002000,9,0x00003000,7,0x00102000,6,0x00004000,2,0x00005000,1,0x00006000,1,0x00201000,7" />
+    <!--touch boost-->
+        <!-- DDRBOOST_MIN_FREQ -->
+    <Hint Id="0x0000006" Type="0" Timeout="200"
+        Resources="0x00201000,4" />
+    <!--performance mode boost-->
+        <!-- CPUBOOST_GOVERNOR BIG Core -->
+        <!-- CPUBOOST_GOVERNOR LITTLE Core -->
+        <!-- CPUBOOST_IDLE_DISABLE ALL Core -->
+        <!-- GPUBOOST_MIN_FREQ -->
+        <!-- DDRBOOST_MIN_FREQ -->
+        <!-- DDRBOOST_BW_EFFICIENT -->
+        <!-- DDRBOOST_THRESHOLD_UP -->
+    <Hint Id="0x0000007" Type="1" Timeout="20000"
+        Resources="0x00002000,5,0x00003000,5,0x00004000,2,0x00102000,4,0x00201000,7" />
+    <Hint Id="0x0000007" Type="2" Timeout="20000"
+        Resources="0x00002000,9,0x00003000,7,0x00102000,4,0x00202000,1,0x00203000,1" />
+    <Hint Id="0x0000007" Type="4" Timeout="20000"
+        Resources="0x00001000,3,0x00001040,3,0x00007000,1,0x00007010,1,0x00007020,1,0x00007030,1,0x00007040,1,0x00007050,1,0x00007060,1,0x00007070,1,0x00102000,6,0x00201000,8" />
+    <Hint Id="0x0000007" Type="5" Timeout="20000"
+        Resources="0x00001000,3,0x00001040,3,0x00007000,1,0x00007010,1,0x00007020,1,0x00007030,1,0x00007040,1,0x00007050,1,0x00007060,1,0x00007070,1,0x00201000,8" />
+    <Hint Id="0x0000007" Type="6" Timeout="20000"
+        Resources="0x00002000,9,0x00003000,7,0x00201000,8" />
+    <!--MTP boost-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core -->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core -->
+        <!-- DDRBOOST_MIN_FREQ -->
+    <Hint Id="0x0000008" Type="0" Timeout="20000"
+        Resources="0x00002000,9,0x00003000,7,0x00201000,7" />
+    <!--activity boost-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core -->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core -->
+        <!-- DDRBOOST_MIN_FREQ -->
+    <Hint Id="0x0000009" Type="0" Timeout="800"
+        Resources="0x00002000,9,0x00003000,7,0x00201000,7" />
+    <!--drag boost-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core -->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core -->
+        <!-- GPUBOOST_MIN_FREQ -->
+        <!-- DDRBOOST_MIN_FREQ -->
+    <Hint Id="0x000000a" Type="0" Timeout="5000"
+        Resources="0x00002000,5,0x00003000,5,0x00102000,4,0x00201000,5" />
+    <!--camera boost-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core -->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core -->
+        <!-- SCHED_TOP_UCLAMP_MIN -->
+        <!-- DDRBOOST_MIN_FREQ -->
+    <Hint Id="0x0001001" Type="0" Timeout="5000"
+        Resources="0x00002000,3,0x00102000,4,0x00201000,5" />
+    <Hint Id="0x0001002" Type="0" Timeout="5000"
+        Resources="0x00003000,3,0x00102000,4,0x00201000,5" />
+    <Hint Id="0x0001003" Type="0" Timeout="5000"
+      Resources="0x00002000,7,0x00003000,7,0x00102000,4,0x00201000,7" />
+    <Hint Id="0x0001004" Type="0" Timeout="5000"
+        Resources="0x00002000,2,0x00003000,2,0x00201000,3" />
+    <Hint Id="0x0001010" Type="0" Timeout="5000"
+        Resources="0x00002000,9,0x00003000,7,0x00102000,6,0x00201000,8" />
+    <!--power interactive boost-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core -->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core -->
+        <!-- SCHED_TOP_UCLAMP_MIN -->
+        <!-- DDRBOOST_MIN_FREQ -->
+    <Hint Id="0x0002001" Type="0" Timeout="1000"
+        Resources="0x00002000,9,0x00003000,7,0x00201000,7" />
+    <Hint Id="0x0002001" Type="1" Timeout="2000"
+        Resources="0x00002000,9,0x00003000,7,0x00102000,6,0x00004000,2,0x00201000,7" />
+    <!--screen changed boost-->
+        <!-- DDRBOOST_MIN_FREQ -->
+    <Hint Id="0x0003001" Type="0" Timeout="5000"
+        Resources="0x00201000,7" />
+    <!--ai boost-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core -->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core -->
+        <!-- DDRBOOST_MIN_FREQ -->
+    <Hint Id="0x0004001" Type="0" Timeout="5000"
+        Resources="0x00002000,9,0x00003000,7,0x00201000,7" />
+    <!--bluetooth boost-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core -->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core -->
+        <!-- DDRBOOST_MIN_FREQ -->
+    <Hint Id="0x0005001" Type="0" Timeout="3000"
+        Resources="0x00002000,9,0x00003000,7,0x00201000,6" />
+    <Hint Id="0x0005001" Type="1" Timeout="3000"
+        Resources="0x00002000,9,0x00003000,7,0x00201000,6" />
+    <!--fingerprint boost-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core -->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core -->
+        <!-- DDRBOOST_MIN_FREQ -->
+    <Hint Id="0x0006001" Type="0" Timeout="600"
+        Resources="0x00002000,9,0x00003000,7,0x00201000,7" />
+</PerfHints>

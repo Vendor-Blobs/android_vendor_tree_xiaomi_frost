@@ -1,0 +1,6 @@
+on property:persist.sys.thermal.enable=1
+        start thermal-engine
+
+service thermal-engine /vendor/bin/thermal-engine
+        user root
+        group root

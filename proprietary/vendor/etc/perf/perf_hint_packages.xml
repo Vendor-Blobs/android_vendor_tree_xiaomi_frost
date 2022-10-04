@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+/* Copyright (c) 2021 JLQ Technology Co., Ltd. or its affiliates.
+ * All Rights Reserved.
+ * Confidential and Proprietary - JLQ Technology Co., Ltd. or its affiliates.
+*/
+-->
+
+<PerfHintPackages>
+    <!-- boost for King of Glory -->
+    <HintPackage Name="com.eg.android.AlipayGphone" WorkloadType="6" Id="0x0000002" Type="0" Timeout="45000"/>
+    <HintPackage Name="com.tencent.tmgp.sgame" WorkloadType="2" Id="0x0000002" Type="0" Timeout="26000"/>
+    <!-- boost for QQ Speed Mobile -->
+    <HintPackage Name="com.tencent.tmgp.speedmobile" WorkloadType="2" Id="0x0000002" Type="0" Timeout="35000"/>
+    <!-- boost for Game For Peace -->
+    <HintPackage Name="com.tencent.tmgp.pubgmhd" WorkloadType="2" Id="0x0000002" Type="0" Timeout="16000"/>
+    <!-- boost for PUBG -->
+    <HintPackage Name="com.tencent.ig" WorkloadType="2" Id="0x0000002" Type="0" Timeout="-1"/>
+    <HintPackage Name="com.pubg.imobile" WorkloadType="2" Id="0x0000002" Type="0" Timeout="-1"/>
+    <!-- boost for Golden Spatula -->
+    <HintPackage Name="com.tencent.jkchess" WorkloadType="2" Id="0x0000002" Type="0" Timeout="-1"/>
+    <!-- boost for LOL -->
+    <HintPackage Name="com.riotgames.league.wildrift" WorkloadType="2" Id="0x0000002" Type="0" Timeout="-1"/>
+    <HintPackage Name="com.riotgames.league.wildrifttw" WorkloadType="2" Id="0x0000002" Type="0" Timeout="-1"/>
+    <!-- boost for Call of Duty -->
+    <HintPackage Name="com.activision.callofduty.shooter" WorkloadType="2" Id="0x0000002" Type="0" Timeout="-1"/>
+    <!-- boost for Arena of Valor -->
+    <HintPackage Name="com.ngame.allstar.eu" WorkloadType="2" Id="0x0000002" Type="0" Timeout="-1"/>
+    <!-- boost for Mobile Legends: Bang Bang -->
+    <HintPackage Name="com.mobile.legends" WorkloadType="2" Id="0x0000002" Type="0" Timeout="-1"/>
+    <!-- boost for Happy Elements -->
+    <HintPackage Name="com.happyelements.AndroidAnimal" WorkloadType="2" Id="0x0000002" Type="0" Timeout="-1"/>
+    <HintPackage Name="com.happyelements.AndroidAnimal.qq" WorkloadType="2" Id="0x0000002" Type="0" Timeout="-1"/>
+    <!-- boost for AnTuTu -->
+    <HintPackage Name="com.antutu.benchmark.full.lite" WorkloadType="4" Id="0x0000002" Type="0" Timeout="-1"/>
+    <HintPackage Name="com.antutu.ABenchMark" WorkloadType="4" Id="0x0000002" Type="0" Timeout="-1"/>
+    <!-- boost for Vellamo -->
+    <HintPackage Name="com.quicinc.vellamo" WorkloadType="4" Id="0x0000002" Type="0" Timeout="-1"/>
+    <!-- boost for GFXBench -->
+    <HintPackage Name="com.glbenchmark.glbenchmark27" WorkloadType="4" Id="0x0000002" Type="0" Timeout="-1"/>
+    <!-- boost for 3DMark -->
+    <HintPackage Name="com.futuremark.dmandroid.application" WorkloadType="4" Id="0x0000002" Type="0" Timeout="-1"/>
+    <!-- boost for GeekBench -->
+    <HintPackage Name="com.primatelabs.geekbench" WorkloadType="4" Id="0x0000002" Type="0" Timeout="-1"/>
+    <HintPackage Name="com.primatelabs.geekbench5" WorkloadType="4" Id="0x0000002" Type="0" Timeout="-1"/>
+    <HintPackage Name="com.primatelabs.geekbench4.corporate" WorkloadType="4" Id="0x0000002" Type="0" Timeout="-1"/>
+    <!-- boost for Master Lu -->
+    <HintPackage Name="com.ludashi.benchmark" WorkloadType="4" Id="0x0000002" Type="0" Timeout="-1"/>
+    <HintPackage Name="com.ludashi.benchmark2" WorkloadType="4" Id="0x0000002" Type="0" Timeout="-1"/>
+    <!-- boost for Master Lu AImark -->
+    <HintPackage Name="com.ludashi.aibench" WorkloadType="5" Id="0x0000002" Type="0" Timeout="-1"/>
+    <!-- boost for AI Benchmark -->
+    <HintPackage Name="org.benchmark.demo" WorkloadType="5" Id="0x0000002" Type="0" Timeout="-1"/>
+    <!-- boost for AnTuTu AI Benchmark -->
+    <HintPackage Name="com.antutu.aibenchmark" WorkloadType="5" Id="0x0000002" Type="0" Timeout="-1"/>
+    <!-- boost for AndroBench -->
+    <HintPackage Name="com.andromeda.androbench2" WorkloadType="5" Id="0x0000002" Type="0" Timeout="-1"/>
+    <!-- boost for CPDT -->
+    <HintPackage Name="com.Saplin.CPDT" WorkloadType="5" Id="0x0000002" Type="0" Timeout="-1"/>
+    <!-- boost for A1 SD Bench -->
+    <HintPackage Name="com.a1dev.sdbench" WorkloadType="5" Id="0x0000002" Type="0" Timeout="-1"/>
+    <!-- boost for Installer APP -->
+    <HintPackage Name="com.google.android.packageinstaller" WorkloadType="6" Id="0x0000002" Type="0" Timeout="-1"/>
+    <HintPackage Name="com.android.packageinstaller" WorkloadType="6" Id="0x0000002" Type="0" Timeout="-1"/>
+    <!-- boost for heavy app -->
+    <HintPackage Name="com.android.chrome" WorkloadType="1" Id="0x0000002" Type="0" Timeout="-1"/>
+    <HintPackage Name="com.facebook.katana" WorkloadType="1" Id="0x0000002" Type="0" Timeout="-1"/>
+    <HintPackage Name="com.google.android.youtube" WorkloadType="1" Id="0x0000002" Type="0" Timeout="-1"/>
+    <HintPackage Name="com.whatsapp" WorkloadType="1" Id="0x0000002" Type="0" Timeout="-1"/>
+    <HintPackage Name="com.instagram.android" WorkloadType="1" Id="0x0000002" Type="0" Timeout="-1"/>
+    <HintPackage Name="com.twitter.android" WorkloadType="1" Id="0x0000002" Type="0" Timeout="-1"/>
+</PerfHintPackages>

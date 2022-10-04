@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+/* Copyright (c) 2021 JLQ Technology Co., Ltd. or its affiliates.
+ * All Rights Reserved.
+ * Confidential and Proprietary - JLQ Technology Co., Ltd. or its affiliates.
+*/
+-->
+
+
+<!--Resource Ids are defined in perf_definition.h, increment ids linearly, do not modify Ids, or add in between-->
+<!--Options is the array sorted by performance level from low to high, don't add whitespace between them-->
+<!--Default is the index of Options array with default level-->
+<!--Node is the file path to be written with one of Options, that maybe need compose with cluster, core, appPid and so on-->
+
+<PerfResources>
+    <Resource Id="0x00001" Default="2" Options="powersave,conservative,schedutil,performance"
+        Node="/sys/devices/system/cpu/cpu%d/cpufreq/scaling_governor" />
+    <Resource Id="0x00002" Default="2" Options="200000,400000,600000,800000,1000000,1200000,1350000,1500000,1750000,2000000"
+        Node="/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq" />
+    <Resource Id="0x00003" Default="2" Options="200000,400000,600000,800000,1000000,1200000,1350000,1500000"
+        Node="/sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq" />
+    <Resource Id="0x00004" Default="1" Options="0.00,10.00,68.00"
+        Node="/dev/cpuctl/top-app/cpu.uclamp.min" />
+    <Resource Id="0x00005" Default="0" Options="0.00,55.00,68.00"
+        Node="/dev/cpuctl/display-service/cpu.uclamp.min" />
+    <Resource Id="0x00006" Default="0" Options="0,1"
+        Node="/dev/cpuctl/top-app/cpu.uclamp.latency_sensitive" />
+    <Resource Id="0x00007" Default="0" Options="0,1"
+        Node="/sys/devices/system/cpu/cpu%d/cpuidle/state1/disable" />
+    <Resource Id="0x00101" Default="2" Options="powersave,cpufreq,simple_ondemand,userspace,performance"
+        Node="/sys/devices/platform/0.soc/30400000.gpu/devfreq/30400000.gpu/governor" />
+    <Resource Id="0x00102" Default="2" Options="100000000,200000000,346214355,400000000,519321533,692428711,800000000"
+        Node="/sys/devices/platform/0.soc/30400000.gpu/devfreq/30400000.gpu/min_freq" />
+    <Resource Id="0x00201" Default="1" Options="100000000,266000000,400000000,533000000,800000000,1066000000,1333000000,1600000000,1866000000"
+        Node="/sys/class/devfreq/0.soc:jlq,ddr-devfreq/userspace/set_freq" />
+    <Resource Id="0x00202" Default="0" Options="70,25"
+        Node="/sys/class/devfreq/0.soc:jlq,ddr-devfreq/device/ddr_bw_effic" />
+    <Resource Id="0x00203" Default="0" Options="80,70"
+        Node="/sys/class/devfreq/0.soc:jlq,ddr-devfreq/device/ddr_th_up" />
+</PerfResources>

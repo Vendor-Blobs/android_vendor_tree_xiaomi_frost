@@ -1,0 +1,15 @@
+#   @file    io-p.c
+#   @brief   Defination for iop service
+#
+#   DESCRIPTION
+#    ---------------------------------------------------------------------------
+#        Copyright (c) 2011-2017,2021 Qualcomm Technologies, Inc.
+#        All Rights Reserved.
+#        Confidential and Proprietary - Qualcomm Technologies, Inc.
+#    ---------------------------------------------------------------------------
+
+service iop-hal-1-0 /vendor/bin/hw/vendor.jlq.hardware.iop@1.0-service
+    class hal
+    user root
+    group root readproc
+    task_profiles ServiceCapacityLow HighIoPriority

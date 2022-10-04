@@ -1,0 +1,9 @@
+isVideoMimovieSupported=1
+logInfoMask=0
+overrideLogLevels=0x1
+logWarningMask=0
+logConfigMask=0
+systemLogEnable=TRUE
+logCoreCfgMask=0
+enableAsciiLogging=0
+logRequestMapping=FALSE

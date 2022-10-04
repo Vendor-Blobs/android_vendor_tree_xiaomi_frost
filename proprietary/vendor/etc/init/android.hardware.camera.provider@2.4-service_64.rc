@@ -1,0 +1,24 @@
+#! /bin/sh
+#
+#Copyright (c) 2019-2020 Qualcomm Technologies, Inc.
+#All Rights Reserved.
+#Confidential and Proprietary - Qualcomm Technologies, Inc.
+#
+
+service vendor.camera-provider-2-4 /vendor/bin/hw/android.hardware.camera.provider@2.4-service_64
+    override
+    interface android.hardware.camera.provider@2.4::ICameraProvider legacy/0
+    interface vendor.qti.hardware.camera.postproc@1.0::IPostProcService camerapostprocservice
+    class hal
+    user cameraserver
+    group audio camera input drmrpc oem_2907
+    ioprio rt 4
+    capabilities SYS_NICE
+    #replace with jlq config
+    #writepid /dev/cpuset/camera-daemon/tasks /dev/stune/foreground/tasks
+    task_profiles CameraServiceCapacity MaxPerformance
+    priority -20
+
+# for jlq qtang2 bwlm
+on property:init.svc.vendor.camera-provider-2-4=running
+    chown cameraserver cameraserver /sys/bus/platform/drivers/jlq,qtang2-camera-bwlm-sensor/cam_bwlm

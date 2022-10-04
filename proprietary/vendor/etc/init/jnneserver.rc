@@ -1,0 +1,6 @@
+on property:sys.boot_completed=1
+    start jnneserver
+service jnneserver /vendor/bin/jnneserver
+    class main
+    user system
+    group system

@@ -1,0 +1,2 @@
+# jlq vendor lib
+libOpenCL.so

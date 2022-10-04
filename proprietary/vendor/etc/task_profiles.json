@@ -1,0 +1,242 @@
+{
+  "Attributes": [
+    {
+      "Name": "UClampMin",
+      "Controller": "cpu",
+      "File": "cpu.uclamp.min"
+    },
+    {
+      "Name": "UClampMax",
+      "Controller": "cpu",
+      "File": "cpu.uclamp.max"
+    },
+    {
+      "Name": "UClampLatencySensitive",
+      "Controller": "cpu",
+      "File": "cpu.uclamp.latency_sensitive"
+    }
+  ],
+  "Profiles": [
+    {
+      "Name": "HighEnergySaving",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpu",
+            "Path": "background"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "NormalPerformance",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpu",
+            "Path": ""
+          }
+        }
+      ]
+    },
+    {
+      "Name": "HighPerformance",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpu",
+            "Path": "foreground"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "MaxPerformance",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpu",
+            "Path": "top-app"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "RealtimePerformance",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpu",
+            "Path": "rt"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "CameraServicePerformance",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpu",
+            "Path": "camera-daemon"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "NNApiHALPerformance",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpu",
+            "Path": "nnapi-hal"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "CpuPolicySpread",
+      "Actions": [
+        {
+          "Name": "SetAttribute",
+          "Params":
+          {
+            "Name": "UClampLatencySensitive",
+            "Value": "1"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "CpuPolicyPack",
+      "Actions": [
+        {
+          "Name": "SetAttribute",
+          "Params":
+          {
+            "Name": "UClampLatencySensitive",
+            "Value": "0"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "LowIoPriority",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "blkio",
+            "Path": "background"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "NormalIoPriority",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "blkio",
+            "Path": ""
+          }
+        }
+      ]
+    },
+    {
+      "Name": "HighIoPriority",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "blkio",
+            "Path": "foreground"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "MaxIoPriority",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "blkio",
+            "Path": "top-app"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "SFRenderEnginePolicy",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpuset",
+            "Path": "top-app"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "DispalyServiceCapacity",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpuset",
+            "Path": "display-service"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "DispalyServicePerformance",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpu",
+            "Path": "display-service"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "AudioServiceCapacity",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpuset",
+            "Path": "audio-service"
+          }
+        }
+      ]
+    }
+  ]
+}
